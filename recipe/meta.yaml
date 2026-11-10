@@ -1,5 +1,5 @@
 {% set name = "cuda-api-wrappers" %}
-{% set version = "0.7.1" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/eyalroz/cuda-api-wrappers/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: fa30c9fe43a62f5a3fd82a5deb477838fbf0bf455c73a2d2bb5ab6284184900b
+  sha256: 8695618b1af03fa74723d54458de8d4a6a26104c01193d5a3e14bf5014d98ba2
 
 build:
   number: 0
-  skip: True  # [cuda_compiler_version == 'None']
+  skip: true  # [cuda_compiler_version == 'None']
 
 requirements:
   build:
